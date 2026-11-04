@@ -1,0 +1,68 @@
+# Build outputs
+bin/
+obj/
+build/
+build-*/
+out/
+dist/
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.obj
+*.o
+*.so
+*.a
+*.dSYM/
+*.msi
+*.msix
+*.appx
+*.nupkg
+
+# IDE / tooling
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.sln.docstates
+CMakeUserPresets.json
+
+# Logs / crash dumps / traces
+*.log
+*.etl
+*.dmp
+*.pcap
+*.pcapng
+logs/
+crashdumps/
+
+# Secrets and certificates
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.token
+*.secret
+.env
+.env.*
+secrets/
+wireguard/*.conf
+
+# Local reference snapshots (unlicensed upstream code — do not commit)
+refs/
+
+# OS noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Node / Python (hub/console tooling, if used)
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
