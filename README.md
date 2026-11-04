@@ -2,7 +2,7 @@
 
 # Xnetik Bridge
 
-### Remote J2534 over WireGuard — the OEM software stays on your PC, the VCI stays with the car.
+### Remote J2534 over WireGuard .
 
 ![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-0078D4?style=flat-square)
 ![SAE](https://img.shields.io/badge/SAE-J2534-0B5FFF?style=flat-square)
@@ -33,7 +33,7 @@ No public inbound port on the car PC. No port forwarding at the customer site. W
 
 ## Features
 
-** =  working
+
 
 | Feature | Status |
 |---|---|
@@ -48,23 +48,22 @@ No public inbound port on the car PC. No port forwarding at the customer site. W
 | Proxy config via  | ✅ |
 | HTTP `/status` JSON | ✅ |
 | Qt 6 link console | ✅ |
-| VIN / ECU identity * 
-| Windows service + installer ****
-| 64-bit builds | exceptions only |
+| VIN / ECU identity  NOT YET
+| Windows service + installer NOT YET
+
 
 
 ---
 
 ## Current status
 
-- 32-bit agent, proxy DLL, probe, and console build successfully.
-- Virtual test passes: open, connect, write, read, `READ_VBATT`, version, filter, programming
+- 32-bit agent, proxy DLL, probe, and console.
+- Virtual and Bench test passes: open, connect, write, read, version, filter, programming
   voltage, periodic messages, close.
-- Real VCI opens and reports:
+- Real VCI connects opens and reports:
   - firmware `V1.44`
   - DLL `V2.02.14`
   - API `04.04`
-- `READ_VBATT` was unavailable on the bench (no vehicle power); retest on the car.
 
 ```
 PASS: Open
@@ -89,7 +88,7 @@ ALL PASS
 - Not a public relay or a port-forwarding service.
 - Not validated on a customer vehicle yet.
 
-The remote site must install the vendor's Windows driver + J2534 DLL. 
+The remote site must install requires j2435 compliant VCI and driver. 
 
 ---
 
@@ -100,7 +99,6 @@ Remote flashing can permanently damage a module or leave a vehicle immobile.
 - Use a bench ECU first.
 - Use a charger and watch battery voltage.
 - Never flash over a link that fails pre-flight checks
-- Treat link quality and voltage as **hard interlocks**, not dashboards.
 
 ---
 
